@@ -1,7 +1,7 @@
 Coursework 1
 ============
 
-This is a fairly simply coursework that is designed to:
+This is a fairly simple coursework that is designed to:
 
 - Get everyone up and running with some command line tools.
 
