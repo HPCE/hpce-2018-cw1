@@ -43,3 +43,12 @@ and pretty much everything will work that works in Linux.
 
 I don't regularly use OS X, but feel free to post questions as
 issues - I or a fellow Mac user can probably help.
+
+Installing FFMPEG with brew
+===========================
+
+@nar213 suggests [how to install ffmpeg using brew](https://github.com/HPCE/hpce-2016-cw1/issues/2):
+
+    brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
+
+They also note: It can take up to 10 minutes.
