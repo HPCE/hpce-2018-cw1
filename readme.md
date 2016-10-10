@@ -156,8 +156,10 @@ You can make the problem easier, by varying the number of iterations:
 
 ### Rendering as a video (optional extra)
 
-If you install [ffmpeg](https://www.ffmpeg.org/download.html) (or avconv on Ubuntu), then you can also make it render
-as a file containing raw RGB32 frames:
+If you install [ffmpeg](https://www.ffmpeg.org/download.html) (or avconv on Ubuntu), then you can also
+view it as a video. @nar213 offers some [suggestions on how to install ffmpeg on OS X](readme_os_x.md#ffmpeg).
+
+First, make it render as a file containing raw RGB32 frames:
 
     # Render 50 frames as a raw rgb32 video to a file called julia.bin
     bin/julia -max-iter 100 -max-frames 50 -width 640 -height 480 -video > julia.bin
