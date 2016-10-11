@@ -21,7 +21,7 @@ unsigned juliaPixelIteration(
 );
 
 //! This is an "abstract" rendering function. It allows us to easily switch rendering engine.
-#typedef void (*julia_frame_render_proc_t)(
+typedef void (*julia_frame_render_proc_t)(
         unsigned width,     //! Number of pixels across
         unsigned height,    //! Number of rows of pixels
         complex_t c,        //! Constant to use in z=z^2+c calculation
