@@ -27,9 +27,11 @@ JULIA_ENGINE_SRCS = \
 
 # Explain how to create bin/julia from sources in $(JULIA_SRCS)
 bin/julia : $(JULIA_ENGINE_SRCS) src/julia_driver.cpp
+	mkdir -p bin
 	$(CXX) -o bin/julia $(CPPFLAGS) $(JULIA_ENGINE_SRCS) src/julia_driver.cpp $(LDFLAGS) $(LDLIBS)
 
 # Alternate curses based interface. This will only build if curses is available.
 # You may need to do `sudo apt-get install libncurses-dev` or equivalent first.
 bin/julia_curses : $(JULIA_ENGINE_SRCS) src/julia_driver.cpp
+	mkdir -p bin
 	$(CXX) -o bin/julia_curses $(CPPFLAGS) $(JULIA_ENGINE_SRCS) src/julia_driver_curses.cpp $(LDFLAGS) -lcurses $(LDLIBS)
