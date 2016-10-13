@@ -10,8 +10,10 @@ If you are using Windows, you have a few choices:
 2. Install a [Linux virtual machine](readme_linux.md). This actually works
     very well, and is well worth considering.
 
-3. Use [MinGW](http://mingw.org/). This provides access to both TBB and OpenCL, but is a much
-  more manual process. I used to recommend this, but the above choices are arguably better.
+3. Use [MinGW](http://mingw.org/). This provides access to both TBB and OpenCL.
+   I prefer not to give people canned versions, but for those who don't have
+   immedate access to VMWare, I prepared a [canned version](https://imperialcollegelondon.app.box.com/v/HPCE-2016-mingw64-tbb).
+   Unzip it somewhere, then you can start it up immediately.
 
 Note that Cygwin is not really a viable option, as TBB does not work (though OpenCL will).
 

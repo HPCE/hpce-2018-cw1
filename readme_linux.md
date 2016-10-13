@@ -32,9 +32,13 @@ to run the VM. There are a few options:
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads): works well on both OS X and Windows
 
 - [VMWare](http://www.vmware.com/products/player/playerpro-evaluation.html):
-  I only have experience of this under Windows. It
-  is installed on the Level 5 lab machines, though I'd
+  I only have experience of this under Windows.
+  It is installed on the Level 5 lab machines, though I'd
   recommend running it on your own machine for the experience.
+  **Note**: _VMWare is temporarily unavailable, but should be
+  installed again by 2016/10/13. As a stop-gap for those who
+  must use lab machines, I prepared a mingw version which will
+  work in the level 5 labs. See the MINGW option on the [windows instructions](readme_windows.md)._
 
 - QEMU: This is more low-level. I wouldn't suggest using this
   (though it is a great piece of software).
