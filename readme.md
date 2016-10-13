@@ -420,7 +420,7 @@ Hopefully you have seen a speed-up, but (as is usually the case), there
 is more than one place where we can add parallelism. Often one of the
 difficulties is deciding which part to parallelise.
 
-**Task**: Create an implementation called `juliaFrameRender_ParallelInner` in
+**Task**: Create an implementation called `juliaFrameRender_ParallelOuter` in
 [`src/julia_frame_parallel_outer.cpp`](src/julia_frame_parallel_outer.cpp) which
 parallelises the *outer* loop.
 
@@ -493,11 +493,11 @@ For each of these experiments, use base-line parameters of:
 
 - max-frames = 1
 
-**Task**: Evaluate the scaling against max-iter (x-axis) with the default width and height,
+**Task**: Evaluate the scaling against max-iter (x-axis) with the baseline width, height, max-iter,
     and save it as `results/scaling_max_iter.pdf`.
 
 **Task**: Evaluate the scaling against dimension (x-axis), where dimension (N) is defined the
-    same way as earlier (image size is NxN) and save it as `results/scaling_dimension.pdf`.
+    same way as the earlier experiment (image size is NxN) and save it as `results/scaling_dimension.pdf`.
 
 **Task**: Evaluate the scaling with width, and save as `results/scaling_width.pdf`.
 
