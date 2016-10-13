@@ -2,7 +2,7 @@
 what tool you used to plot your graphs, nor what platform you are using. However, I look at
 a random sub-sample of submissions. If necessary I will ask people to demonstrate getting
 the results again. "But, but, but...", a hypothetical student might ask,
-"what if I get the same results next time?". Of course, the results will never be the
+"what if I don't get the same results next time?". Of course, the results will never be the
 same the second time, but they should be of similar sizes, with similar trends.
 "Ah", our friend might say, "my computer has been replaced / I've upgraded my OS / Trump was
 elected since then". Fine, I don't care. Just do the same process on the new setup and
