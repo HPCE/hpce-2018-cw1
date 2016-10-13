@@ -355,6 +355,10 @@ it you are adding two things to the `CPPFLAGS` variable:
     Including `assert` statements is incredibly valuable when debugging, but
     once the code is correct they are only slowing things down <sup>[2](readme_footnotes.md#assert_in_production)</sup>.
 
+Modifying the makefile won't tell make that the inputs have changed, to
+do that you can pass the `-B` option to make, or touch/modify one of the sources.
+See also [issue #10](https://github.com/HPCE/hpce-2016-cw1/issues/10).
+
 **Task**: Re-generate the maximum iteration scaling performance from earlier,
 and plot a graph of the absolute release execution times versus the debug execution times
 (seconds on the y scale). Save it as a graph called `results/release_max_iter_versus_time.pdf`.
