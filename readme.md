@@ -497,7 +497,7 @@ For each of these experiments, use base-line parameters of:
 
 - max-frames = 1
 
-**Task**: Evaluate the scaling against max-iter (x-axis) with the baseline width, height, max-iter,
+**Task**: Evaluate the scaling against max-iter (x-axis) with the baseline width, height, max-frames,
     and save it as `results/scaling_max_iter.pdf`.
 
 **Task**: Evaluate the scaling against dimension (x-axis), where dimension (N) is defined the
