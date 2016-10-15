@@ -114,7 +114,7 @@ I get:
 
 We want to develop with tbb, so the package needed is `libtbb-dev`:
 
-    sudo apt-cache install libtbb-dev
+    sudo apt install libtbb-dev
 
 Another thing you might want to do is to find the package that provides
 a file. For example, we might want to know who provides `parallel_for.h`.
