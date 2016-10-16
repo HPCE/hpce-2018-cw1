@@ -9,14 +9,16 @@ also want to install extra libraries, such as TBB.
 
 You have three main choices:
 
-1 - Use the [`macports`](https://www.macports.org/) package manager
-    to install and manage the additional tools.
-
-2 - Use the [`homebrew`](http://brew.sh/) package manager to install
+1 - Use the [`homebrew`](http://brew.sh/) package manager to install
     and manage the additional tools.
+
+2 - Use the [`macports`](https://www.macports.org/) package manager
+    to install and manage the additional tools.
   
 3 - Run [Linux in a virtual machine](platforms_linux.md). For OS X
     I would suggest one of the above options in preference to a VM.
+    
+_Updated: consensus seems to be that brew is easier than ports, see [issue 17](https://github.com/HPCE/hpce-2016-cw1/issues/17)._
 
 Some people like macports, some like homebrew - personally I've only
 used macports. There are [instructions for installing macports](https://www.macports.org/install.php)
