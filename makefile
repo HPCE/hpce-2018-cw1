@@ -35,3 +35,9 @@ bin/julia : $(JULIA_ENGINE_SRCS) src/julia_driver.cpp
 bin/julia_curses : $(JULIA_ENGINE_SRCS) src/julia_driver.cpp
 	mkdir -p bin
 	$(CXX) -o bin/julia_curses $(CPPFLAGS) $(JULIA_ENGINE_SRCS) src/julia_driver_curses.cpp $(LDFLAGS) -lcurses $(LDLIBS)
+
+# A "clean" target. Originally missing, thanks to @lynx5120 for pointing out it was gone
+# The '-' preceding the command is to indicate that we don't mind if it fails.
+clean :
+	rm -f bin/julia bin/julia_curses
+	
