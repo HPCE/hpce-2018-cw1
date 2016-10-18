@@ -532,3 +532,15 @@ In order to submit:
 
 Note that you have unlimited uploads to blackboard.
 
+### Submission script
+
+The submission test script is now included. Once you
+have a zip file, you can run it using:
+
+    ./test_submission.sh [YOUR_LOGIN] [PATH_TO_YOUR_ZIP]
+
+It relies on a few tools such as `awk`, `unzip`, and `grep`,
+but it should warn you if it doesn't work. I've tried it
+in a couple of environments, and tested it against the
+two zip files initially submitted - one of them passed all
+tests first time.
