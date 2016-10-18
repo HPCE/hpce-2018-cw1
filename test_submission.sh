@@ -55,7 +55,7 @@ fi
 echo "Looking for the readme.md file."
 ANCHOR_DIR=""
 if [ -f ${WORKING_DIR}/readme.md ]; then
-    ANCHOR_DIR = ${WORKING_DIR};
+    ANCHOR_DIR=${WORKING_DIR};
 else
     SUBDIRS=$(ls ${WORKING_DIR});
 	for i in $SUBDIRS; do
