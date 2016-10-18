@@ -158,7 +158,7 @@ function test_pdf_exists {
     if [[ -f "${ANCHOR_DIR}/$1" ]]; then
         failed=0;
     fi
-    test_report $failed "File $1 exists.";
+    test_report $failed "Check for existence of file $1.";
     test_footer;
 }
 
