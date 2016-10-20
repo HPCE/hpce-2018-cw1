@@ -527,6 +527,7 @@ In order to submit:
 - run `make clean` to get rid of temporary files.
 
 - zip your submission directory into a file called `[YOUR_LOGIN].zip`.
+  Note, this zip should [contain the sources as well](https://github.com/HPCE/hpce-2016-cw1/issues/28).
 
 - Submit it via blackboard.
 
