@@ -546,3 +546,7 @@ but it should warn you if it doesn't work. I've tried it
 in a couple of environments, and tested it against the
 two zip files initially submitted - one of them passed all
 tests first time.
+
+_Note: Currently there are problems with OS X due to it missing
+a linux compatible `date` command. Thanks to @Pietromarone for [pointing
+it out, and also giving a workaround](https://github.com/HPCE/hpce-2016-cw1/issues/27)._
