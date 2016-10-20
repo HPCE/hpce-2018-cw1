@@ -198,13 +198,14 @@ You should see some output that breaks the execution time down into:
 
  - real : the amount of wall-clock time taken to execute
 
- - user : the amount of CPU time take executing the actual program
+ - user : the total amount of CPU time taken executing the actual program,
+   across all CPUs.
 
  - sys : the amount of OS/kernel time taken on behalf of the program
 
 You may find that `real = user + sys`, or `real > user + sys`. Eventually
 we would like to get to `real = user / P + sys`, where P is the number of
-processors.
+processors (e.g. see [this question](https://github.com/HPCE/hpce-2016-cw1/issues/26)).
 
 Note that in the following I have no particular hardware or
 software platform in mind - it is whatever you prefer to use<sup>[1](readme_footnotes.md#)</sup>
