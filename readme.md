@@ -509,6 +509,9 @@ For each of these experiments, use base-line parameters of:
 **Task**: Evaluate the scaling with height, and save as `results/scaling_height.pdf`.
 
 **Task**: Evaluate the scaling with max-frames, and save as `results/scaling_max_frames.pdf`.
+  Note: this requires the `-animation` flag to be passed in order to see differences.
+  I originally [didn't specify this](https://github.com/HPCE/hpce-2016-cw1/issues/29), so don't
+  worry if you've already done all the graphs.
 
 The whole goal of getting you to do these graphs is to get you to think about
 what is happening. Even without knowing how TBB is doing things, how can
