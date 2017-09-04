@@ -29,13 +29,14 @@ function check_for_tool {
     fi
 }
 
+# Look for a few tools that we will need in this script
 check_for_tool unzip;
 check_for_tool awk;
 check_for_tool grep;
 check_for_tool g++;
 check_for_tool make;
 
-
+# Progress will be written to this file
 LOG_FILE=${WORKING_DIR}/${STUDENT_LOGIN}.log
 
 # Extract the zip file there
@@ -199,7 +200,7 @@ for e in ${ENGINES}; do
         "diff --ignore-space-change ${ANCHOR_DIR}/julia_16x16.ref ${ANCHOR_DIR}/${e}_16x16.got"
 done
 
-
+# This is to work around the vagaries of `time` on different shells
 function time_command_ms {
     BEGIN=$(date "+%s.%N");
     eval $1;
@@ -255,9 +256,6 @@ test_pdf_exists "results/scaling_width.pdf"
 test_pdf_exists "results/scaling_height.pdf"
 
 test_pdf_exists "results/scaling_max_frames.pdf"
-
-
-
 
 
 log_base "Passed ${test_passed} out of ${test_index} tests.";

@@ -18,10 +18,10 @@ You have three main choices:
 3 - Run [Linux in a virtual machine](platforms_linux.md). For OS X
     I would suggest one of the above options in preference to a VM.
     
-_Updated: consensus seems to be that brew is easier than ports, see [issue 17](https://github.com/HPCE/hpce-2016-cw1/issues/17)._
+_Updated: consensus seems to be that brew is easier than ports, see [issue 17](https://github.com/HPCE/hpce-2017-cw1/issues/17)._
 
 Some people like macports, some like homebrew - personally I've only
-used macports. There are [instructions for installing macports](https://www.macports.org/install.php)
+used macports, and that was a few yeas ago. There are [instructions for installing macports](https://www.macports.org/install.php)
 on the web-site, and the process is pretty reliable.
 
 Once macports is installed, you have a command line package manager
@@ -49,7 +49,7 @@ issues - I or a fellow Mac user can probably help.
 Installing FFMPEG with brew
 ===========================
 
-@nar213 suggests [how to install ffmpeg using brew](https://github.com/HPCE/hpce-2016-cw1/issues/2):
+@nar213 suggests [how to install ffmpeg using brew](https://github.com/HPCE/hpce-2017-cw1/issues/2):
 
     brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
 

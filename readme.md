@@ -14,21 +14,19 @@ This is a fairly simple coursework that is designed to:
 
 The coursework is due:
 
-    Mon Oct 24th
+    Fri Oct 20th
 
 Submission is via blackboard for this coursework, as it is
-unfair to ask everyone to fully use git so soon.
-
-Note that on Mon Oct 17th I will release the testing
-script, to allow people to self-test and debug any issues.
+unfair to ask everyone to fully use git so soon. Future
+courseworks will be via git only.
 
 At various points I mention posting "issues". Issues are a way
 of registering bugs, but I also use them here for communication.
-If you want to register an issue, go to the [issues](https://github.com/HPCE/hpce-2016-cw1/issues)
+If you want to register an issue, go to the [issues](https://github.com/HPCE/hpce-2017-cw1/issues)
 page for the shared master repository. Please note that issues
 should include enough information to allow other people to help.
 
-Useful things to include are:
+Useful things to include in an issue are:
 
 - Descriptions of what you are trying to achieve
 
@@ -40,13 +38,11 @@ Useful things to include are:
 
 - Screenshots
 
-This coursework is new for this year. The previous version
-use matlab, and seemed to dismay people, so I finally gave
-up and went for C++ from the start. As a consequence this
-coursework will contain some rough edges - I'm quite happy
-with that, as 4th years and MSc students should be able
-to deal with errors in specifications (and point them out
-using issues...).
+This coursework is in its second year. The previous version
+used matlab, and seemed to dismay people, so I finally gave
+up and went for C++ from the start. It's relatively simple
+once you have an environment, so is mainly intended for
+an early performance win.
 
 Choose a platform
 =================
@@ -85,14 +81,15 @@ Clone the source code
 
 Assuming you have sent me your login details, you should
 have your own private repository containing a copy of
-the coursework. If you are in github looking at:
+the coursework. If you are currently on the github website
+looking at:
 
-    https://github.com/HPCE/hpce-2016-cw1
+    https://github.com/HPCE/hpce-2017-cw1
 
 then you are on the shared (read-only) copy of the specification.
 If you are looking at:
 
-    https://github.com/HPCE/hpce-2016-cw1-[YOUR_LOGIN]
+    https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN]
 
 then you are at your own private copy. No-one else should be
 able to see this version, except for me (David).
@@ -101,25 +98,29 @@ Notice that there is a green button called "Clone or Download"
 on the top right of the page. If you click it and choose `https`,
 you should get the following URL:
 
-    https://github.com/HPCE/hpce-2016-cw1-[YOUR_LOGIN].git
+    https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN].git
 
 Open your terminal, and navigate to a convenient directory
 (e.g. your working directory, or some directory containing
-your coursework). You can now clone a local copy of your
+all your courseworks). You can now clone a local copy of your
 repository by doing:
 
-    git clone https://github.com/HPCE/hpce-2016-cw1-[YOUR_LOGIN].git
+    git clone https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN].git
 
-After typing in your github credentials, then you should have
+After typing in your github credentials, you should have
 a local copy of the repository. Note that you could also use
-a GUI for this step - it doesn't really matter how you get it.
+a git GUI for this step - it doesn't really matter how you get it.
 
 To move into the repository, do:
 
-    cd hpce-2016-cw1-[YOUR_LOGIN]
+    cd hpce-2017-cw1-[YOUR_LOGIN]
 
 If you do `ls`, you should see all the files and directories
 from the repository.
+
+_*Note* : Almost all terminals support [tab completion](https://en.wikipedia.org/wiki/Command-line_completion),
+so if you type `cd hp`, then hit tab, it will either auto-complete the full path, or will
+show all paths starting with that prefix._
 
 Get the code building
 =====================
@@ -136,11 +137,13 @@ You should see a strange ASCII pattern come out (it
 may come out faster or slower, depending on your
 machine). This is a rendering of the [Julia set](https://en.wikipedia.org/wiki/Julia_set).
 
+_*Note* : Most terminals allow you to recalle previous commands by using the "up" key._
+
 At this point you may wish to play around with the parameters:
 
     bin/julia -help
 
-**Note* : if you want to kill the application, then the standard console command is Control+c_
+_*Note* : if you want to kill the application, then the standard console command is Control+c_
 
 For example, you can make it show an animation:
 
@@ -157,7 +160,7 @@ You can make the problem easier, by varying the number of iterations:
 ### Rendering as a video (optional extra)
 
 If you install [ffmpeg](https://www.ffmpeg.org/download.html) (or avconv on Ubuntu), then you can also
-view it as a video. @nar213 offers some [suggestions on how to install ffmpeg on OS X](readme_os_x.md#ffmpeg).
+view it as a video. _@nar213 offers some [suggestions on how to install ffmpeg on OS X](readme_os_x.md#ffmpeg)._
 
 First, make it render as a file containing raw RGB32 frames:
 
@@ -174,7 +177,7 @@ If you have a GUI available (e.g. in Linux or OS-X) you can play the video direc
     # Play the file back using ffmpeg
     ffplay -f rawvideo -framerate 25 -pixel_format rgb32 -video_size 640x480 julia.bin
 
-You can also avoid the optional intermediate file `julia.bin` using a pipe:
+You can also avoid the optional intermediate file `julia.bin` using a [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)):
 
     bin/julia -max-iter 100 -width 640 -height 480 -video   |   ffplay -f rawvideo -framerate 25 -pixel_format rgb32 -video_size 640x480 -
 
@@ -184,35 +187,31 @@ Establishing current performance
 ================================
 
 Currently the default julia is probably quite slow (though it
-depends on the computer and OS):
-
-    bin/julia
-
-We want to make it faster, so first we need to establish how
-fast it currently is. There is a builtin command in bash (and
-other unix shells) called `time`:
+depends on the computer and OS). We want to make it faster, so
+first we need to establish how fast it currently is. There is a
+builtin command in bash (and other unix shells) called `time`:
 
     time bin/julia
 
 You should see some output that breaks the execution time down into:
 
- - real : the amount of wall-clock time taken to execute
+ - *real* : the amount of wall-clock time taken to execute
 
- - user : the total amount of CPU time taken executing the actual program,
+ - *user* : the total amount of CPU time taken executing the actual program,
    across all CPUs.
 
- - sys : the amount of OS/kernel time taken on behalf of the program
+ - *sys* : the amount of OS/kernel time taken on behalf of the program
 
 You may find that `real = user + sys`, or `real > user + sys`. Eventually
 we would like to get to `real = user / P + sys`, where P is the number of
-processors (e.g. see [this question](https://github.com/HPCE/hpce-2016-cw1/issues/26)).
+processors (e.g. see [this question](https://github.com/HPCE/hpce-2017-cw1/issues/26)).
 
 Note that in the following I have no particular hardware or
-software platform in mind - it is whatever you prefer to use<sup>[1](readme_footnotes.md#)</sup>
+software platform in mind - it is whatever you prefer to use.
 
-As you're doing these experiments, you may wish to surpress the
+As you're doing these experiments, you may wish to supress the
 printing of the fractal. One way of doing this is to redirect
-the output to the null device:
+the output to the [null device](https://en.wikipedia.org/wiki/Null_device):
 
     bin/julia > /dev/null
 
@@ -314,8 +313,8 @@ On the command line, the steps are:
     # Push the changes back up (you'll need to type your password)
     git push
 
-If you hit refresh on you private repository, you hopefully
-will see that the graphs have appeared in github.
+If you hit refresh on your private repository on the github
+website, you hopefully will see that the graphs have appeared in github.
 
 Turning on optimisations
 ========================
@@ -335,7 +334,7 @@ Exactly how you enable optimisations depends on the compiler and
 platform. In GUIs like Visual Studio and Eclipse there is usually
 a "Release" build (as opposed to the default "Debug" build). In
 build tools like cmake there is a similar option for targetting
-release. For low-level tools like make, it is up to you to enable
+release. For low-level tools like `make`, it is up to you to enable
 it.
 
 **Task**: Look through the makefile for a line which looks like:
@@ -356,9 +355,8 @@ it you are adding two things to the `CPPFLAGS` variable:
     Including `assert` statements is incredibly valuable when debugging, but
     once the code is correct they are only slowing things down <sup>[2](readme_footnotes.md#assert_in_production)</sup>.
 
-Modifying the makefile won't tell make that the inputs have changed, to
+Modifying the makefile won't tell `make` that the inputs have changed; to
 do that you can pass the `-B` option to make, or touch/modify one of the sources.
-See also [issue #10](https://github.com/HPCE/hpce-2016-cw1/issues/10).
 
 **Task**: Re-generate the maximum iteration scaling performance from earlier,
 and plot a graph of the absolute release execution times versus the debug execution times
@@ -383,8 +381,7 @@ We're also going to use the simplest form of `tbb::parallel_for`, which looks
 the most like a for loop. Other forms are more efficient, but require more
 rewriting.
 
-The basic template we well follow is to transform this:
-
+The basic template we will follow is to transform this:
 
     for(unsigned i=begin; i < end ; i++){
         // Code that calculates a function dependent on i
@@ -510,12 +507,10 @@ For each of these experiments, use base-line parameters of:
 
 **Task**: Evaluate the scaling with max-frames, and save as `results/scaling_max_frames.pdf`.
   Note: this requires the `-animation` flag to be passed in order to see differences.
-  I originally [didn't specify this](https://github.com/HPCE/hpce-2016-cw1/issues/29), so don't
-  worry if you've already done all the graphs.
 
 The whole goal of getting you to do these graphs is to get you to think about
 what is happening. Even without knowing how TBB is doing things, how can
-you explain what happens? When is `parallel_innner` good versus when is `parallel_outer`
+you explain what happens? When is `parallel_inner` good versus when is `parallel_outer`
 good? Under "normal" parameters, which method would you recommend using?
 
 Submission
@@ -531,7 +526,7 @@ In order to submit:
 - run `make clean` to get rid of temporary files.
 
 - zip your submission directory into a file called `[YOUR_LOGIN].zip`.
-  Note, this zip should [contain the sources as well](https://github.com/HPCE/hpce-2016-cw1/issues/28).
+  Note, this zip should [contain the sources as well](https://github.com/HPCE/hpce-2017-cw1/issues/28).
 
 - Submit it via blackboard.
 
@@ -539,17 +534,14 @@ Note that you have unlimited uploads to blackboard.
 
 ### Submission script
 
-The submission test script is now included. Once you
-have a zip file, you can run it using:
+A submission test script is now included. Once you
+have created a zip file, you can test it using:
 
     ./test_submission.sh [YOUR_LOGIN] [PATH_TO_YOUR_ZIP]
 
 It relies on a few tools such as `awk`, `unzip`, and `grep`,
-but it should warn you if it doesn't work. I've tried it
-in a couple of environments, and tested it against the
-two zip files initially submitted - one of them passed all
-tests first time.
+but it should warn you if it doesn't work.
 
 _Note: Currently there are problems with OS X due to it missing
 a linux compatible `date` command. Thanks to @Pietromarone for [pointing
-it out, and also giving a workaround](https://github.com/HPCE/hpce-2016-cw1/issues/27)._
+it out, and also giving a workaround](https://github.com/HPCE/hpce-2017-cw1/issues/27)._

@@ -8,7 +8,7 @@ are quite easy to install.
 You don't have to be running Linux natively in order to use
 it for this course - it works quite well in a virtual machine,
 and you get almost full performance from multiple cores.
-Support for GPUs from virtual machines is still quite poor,
+Support for GPUs from virtual machines is still poor/non-existent,
 but it is possible to install a software OpenCL for development purposes,
 then do the actual evaluation on a remote linux instance.
 
@@ -22,9 +22,14 @@ Setting up a virtual machine
 ----------------------------
 
 I would suggest setting up a virtual machine rather than
-a full install of Linux, unless you want the experience.
-Dual booting can be useful, but you might find it gets
-in the way a bit.
+a full install of Linux, at least to start with. Later on
+if you want to access your GPU from within Linux it will
+need to be native, but the idea is that later on we well
+use GPUs in AWS, so the performance of _your_ GPU is less
+interesting. Dual booting can be useful, but you might find
+it gets in the way a bit at first - try not to get blocked
+on creating a perfect install of Linux _before_ doing the
+first coursework.
 
 You'll need some kind of virtualisation software in order
 to run the VM. There are a few options:
@@ -32,13 +37,8 @@ to run the VM. There are a few options:
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads): works well on both OS X and Windows
 
 - [VMWare](http://www.vmware.com/products/player/playerpro-evaluation.html):
-  I only have experience of this under Windows.
-  It is installed on the Level 5 lab machines, though I'd
-  recommend running it on your own machine for the experience.
-  **Note**: _VMWare is temporarily unavailable, but should be
-  installed again by 2016/10/13. As a stop-gap for those who
-  must use lab machines, I prepared a mingw version which will
-  work in the level 5 labs. See the MINGW option on the [windows instructions](readme_windows.md)._
+  I only have experience of this under Windows, though don't really use
+  it much.
 
 - QEMU: This is more low-level. I wouldn't suggest using this
   (though it is a great piece of software).

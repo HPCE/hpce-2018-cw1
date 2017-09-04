@@ -6,8 +6,7 @@ the results again. "But, but, but...", a hypothetical student might ask,
 same the second time, but they should be of similar sizes, with similar trends.
 "Ah", our friend might say, "my computer has been replaced / I've upgraded my OS / Trump was
 elected since then". Fine, I don't care. Just do the same process on the new setup and
-I'll watch.
-
+I'll watch you do it.
 
 <a name="assert_in_production">2</a> - Note that there is some disagreement on
     [asserts in production code](http://stackoverflow.com/questions/17732/when-should-assertions-stay-in-production-code),

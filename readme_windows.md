@@ -3,19 +3,19 @@ Windows as a platform
 
 If you are using Windows, you have a few choices:
 
-1. Windows 10 only: Using the [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
-   This will work well for the multi-core (TBB) parts, though compatability with OpenCL is less likely to work (WSL is very new).
-   [Installation instructions](https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide) are available from Microsoft.
-
-2. Install a [Linux virtual machine](readme_linux.md). This actually works
-    very well, and is well worth considering.
-
-3. Use [MinGW](http://mingw.org/). This provides access to both TBB and OpenCL.
-   I prefer not to give people canned versions, but for those who don't have
-   immedate access to VMWare, I prepared a [canned version](https://imperialcollegelondon.app.box.com/v/HPCE-2016-mingw64-tbb).
+1. Use [MinGW](http://mingw.org/). This provides access to both TBB and OpenCL.
+   I prefer not to give people canned versions of environments, but traditionally
+   setting up things has blocked people more than it should, so: [canned version](https://imperialcollegelondon.app.box.com/v/HPCE-2017-mingw64-tbb-opencl).
    Unzip it somewhere, then you can start it up immediately.
 
-Note that Cygwin is not really a viable option, as TBB does not work (though OpenCL will).
+2. Windows 10 only: Using the [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
+   This will work well for the multi-core (TBB) parts, though compatibility with OpenCL is less likely to work (WSL is very new).
+   [Installation instructions](https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide) are available from Microsoft.
+
+3. Install a [Linux virtual machine](readme_linux.md). This actually works
+    very well for TBB (though not OpenCL), and is well worth considering as a learning experience...
+
+Note that Cygwin is not really a viable option, as TBB does not work (though OpenCL will...).
 
 Compiling with Visual Studio
 ----------------------------
