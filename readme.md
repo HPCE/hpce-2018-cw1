@@ -541,7 +541,3 @@ have created a zip file, you can test it using:
 
 It relies on a few tools such as `awk`, `unzip`, and `grep`,
 but it should warn you if it doesn't work.
-
-_Note: Currently there are problems with OS X due to it missing
-a linux compatible `date` command. Thanks to @Pietromarone for [pointing
-it out, and also giving a workaround](https://github.com/HPCE/hpce-2017-cw1/issues/27)._
