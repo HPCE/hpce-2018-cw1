@@ -5,8 +5,10 @@ If you are using Windows, you have a few choices:
 
 1. Use [MinGW](http://mingw.org/). This provides access to both TBB and OpenCL.
    I prefer not to give people canned versions of environments, but traditionally
-   setting up things has blocked people more than it should, so: [canned version](https://imperialcollegelondon.app.box.com/v/HPCE-2017-mingw64-tbb-opencl).
-   Unzip it somewhere, then you can start it up immediately.
+   setting up things has blocked people more than it should, so: [canned version](https://imperialcollegelondon.app.box.com/v/HPCE-2017-mingw64-tbb-opencl). Note that this file is ~700MB, so I strongly recommend you download it in college, and start the download
+   before you want to use it.
+   Unzip it somewhere, then you can start it up immediately. You'll need around 2GB wherever you install it, so a 4GB
+   USB drive works quite well, and makes it portable.
 
 2. Windows 10 only: Using the [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
    This will work well for the multi-core (TBB) parts, though compatibility with OpenCL is less likely to work (WSL is very new).
