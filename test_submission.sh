@@ -129,10 +129,12 @@ function test_report {
 # $1 - Name of test
 # $2 - Command to run
 function test_command_and_exit_code {
+    local R
 	test_header;
 	eval "$2";
+    R="$?"
     echo ""
-    test_report $? "$1";
+    test_report $R "$1";
 	test_footer;
 }
 
@@ -221,7 +223,6 @@ test_condition "For wide output reference time ${WIDE_REF} slower than parallel_
 
 test_condition "For wide output parallel_both time ${WIDE_BOTH} similar to parallel_inner ${WIDE_INNER}" \
     "$(( ( ${WIDE_BOTH} * 3 < ${WIDE_INNER} * 4 ) && ( ${WIDE_BOTH} * 4 > ${WIDE_INNER} * 3 ) ))"
-
 
 TALL_REF=$(time_command_ms "${ANCHOR_DIR}/bin/julia -width 2 -height 1000 -max-iter 100000 > /dev/null")
 TALL_INNER=$(time_command_ms "${ANCHOR_DIR}/bin/julia -engine parallel_inner -width 2 -height 1000 -max-iter 100000 > /dev/null")
