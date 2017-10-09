@@ -49,8 +49,8 @@ issues - I or a fellow Mac user can probably help.
 Installing FFMPEG with brew
 ===========================
 
-@nar213 suggests [how to install ffmpeg using brew](https://github.com/HPCE/hpce-2017-cw1/issues/2):
+@filangel suggests [how to install ffmpeg using brew](https://github.com/HPCE/hpce-2017-cw1/issues/33):
 
-    brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265
+    brew install ffmpeg --with-fdk-aac --with-sdl2 --with-freetype --with-libass --with-libvorbis --with-libvpx --with-opus --with-x265
 
-They also note: It can take up to 10 minutes.
+It was also noted by @nar213: It can take up to 10 minutes.
