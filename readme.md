@@ -414,7 +414,8 @@ When first compiling with TBB, you are likely to see the two stages of errors we
 encountered in the in-lecture demo:
 
 - Compilation errors : usually due to a missing `#include`, or due to the TBB
-  files not being on the include path.
+  files not being on the include path. You may also see problems due to [the
+  argument types for `parallel_for`](https://github.com/HPCE/hpce-2017-cw1/issues/35).
   
 - Linker errors : this is because the TBB library needs to be linked into the
   executable.
