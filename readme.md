@@ -410,7 +410,33 @@ and parallelise the *inner* loop using `tbb::parallel_for`.
 The innner loop is simply the inner-most loop in the heirarchy of loops, in this case
 the loop over `x`.
 
-Once you have done this, you should play around with the resulting change
+When first compiling with TBB, you are likely to see the two stages of errors we
+encountered in the in-lecture demo:
+
+- Compilation errors : usually due to a missing `#include`, or due to the TBB
+  files not being on the include path.
+  
+- Linker errors : this is because the TBB library needs to be linked into the
+  executable.
+  
+If you use a version of TBB installed with your package manager, the only
+change you should need is to uncomment this line in the makefile:
+
+    # LDLIBS += -ltbb
+
+by changing it to:
+
+    LDLIBS += -ltbb
+    
+i.e. removing the '#'. This is the equivalent of when `-ltbb` was explicitly
+added to the command line in the in-lecture demo. _Thanks to @ppp2211 for
+[pointing out this was missing](https://github.com/HPCE/hpce-2017-cw1/issues/32)._
+
+_**Note**: you may find that the platform you originally chose makes it difficult
+to install TBB. Do not despair - your code should be portable to other platforms,
+so you can always change: [Linux](readme_linux.md), [Windows](readme_windows.md), [OS-X](readme_os_x.md)._
+
+Once you have got this working, you should play around with the resulting change
 in performance. It should be asymptotically faster than the reference version,
 but you will likely find that for small scale parameters (max iterations and
 image dimensions) there is less speed-up, or even a slow-down.
