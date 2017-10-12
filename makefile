@@ -36,6 +36,13 @@ bin/julia_curses : $(JULIA_ENGINE_SRCS) src/julia_driver.cpp
 	mkdir -p bin
 	$(CXX) -o bin/julia_curses $(CPPFLAGS) $(JULIA_ENGINE_SRCS) src/julia_driver_curses.cpp $(LDFLAGS) -lcurses $(LDLIBS)
 
+# Hack to get some kind of time command that supports user time under mingw64
+ifeq ($(OS),Windows_NT)
+bin/mingw64-time : src/mingw64-time.cpp
+	mkdir -p bin
+	$(CXX) -O3 -DNDEBUG=1 $< -o $@
+endif
+
 # A "clean" target. Originally missing, thanks to @lynx5120 for pointing out it was gone
 # The '-' preceding the command is to indicate that we don't mind if it fails.
 clean :
