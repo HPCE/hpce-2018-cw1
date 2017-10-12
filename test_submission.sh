@@ -33,6 +33,7 @@ function check_for_tool {
 check_for_tool unzip;
 check_for_tool awk;
 check_for_tool grep;
+check_for_tool diff;
 check_for_tool g++;
 check_for_tool make;
 
