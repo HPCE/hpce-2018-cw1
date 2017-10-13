@@ -14,7 +14,7 @@ This is a fairly simple coursework that is designed to:
 
 The coursework is due:
 
-    Fri Oct 20th
+    22:00 Fri Oct 20th
 
 Submission is via blackboard for this coursework, as it is
 unfair to ask everyone to fully use git so soon. Future
@@ -563,6 +563,17 @@ In order to submit:
 - Submit it via blackboard.
 
 Note that you have unlimited uploads to blackboard.
+
+The new [late submission policy](https://www.imperial.ac.uk/media/imperial-college/administration-and-support-services/registry/academic-governance/public/academic-policy/marking-and-moderation/Late-submission-Policy.pdf)
+means that coursework submitted up to 24 hours late will still be marked, but is capped at 40%.
+Because submission is unlimited, someone could submit both before and after the deadline; as a consequence
+the following rules will apply:
+- The deadline is 22:00 Fri Oct.
+- There is a grace period from 22:00-22:10 to allow for latency uploading to black-board.
+- Any submision with a time-stamp after 22:10 will be considered a late submission, even
+  if there are earlier submissions.
+Please be aware of the potential for slow uploads to blackboard, especially if you
+are trying to upload a very large zip (which ideally you won't need to).
 
 ### Submission script
 
