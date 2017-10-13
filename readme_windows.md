@@ -9,7 +9,9 @@ If you are using Windows, you have a few choices:
    before you want to use it.
    Unzip it somewhere, then you can start it up immediately. You'll need around 2GB wherever you install it, so a 4GB
    USB drive works quite well, and makes it portable.
-   For the submission script you will have to install missing packets (unzip, diffutils) by using pacman -S <packet>
+   _**Note** : Up until Oct 12th 20:00, the canned version was missing some tools by default (`make`, `diff`, `unzip`), but since then
+   the version online has them all included. Thanks to @jeg114 for pointing out they were missing, and pointing out they can
+   be installed with `pacman -S <package>`._
 
 2. Windows 10 only: Using the [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
    This will work well for the multi-core (TBB) parts, though compatibility with OpenCL is less likely to work (WSL is very new).
