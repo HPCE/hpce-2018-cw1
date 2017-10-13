@@ -201,6 +201,11 @@ You should see some output that breaks the execution time down into:
    across all CPUs.
 
  - *sys* : the amount of OS/kernel time taken on behalf of the program
+ 
+ _**Note**: it turns out that `time` in mingw64 is broken,
+ [and returns incorrect values for user and system time](https://github.com/HPCE/hpce-2017-cw1/issues/37).
+ There is a workaround detailed in the issue to get correct user time, but note that the
+ remaining parts only really need execution time (i.e. the "real" part)._
 
 You may find that `real = user + sys`, or `real > user + sys`. Eventually
 we would like to get to `real = user / P + sys`, where P is the number of
