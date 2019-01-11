@@ -2,7 +2,7 @@
 # Turn on warnings and C++ 11 features
 CPPFLAGS += -W -Wall -std=c++11
 
-# Turn of "unused parameter" in g++
+# Turn off "unused parameter" in g++
 CPPFLAGS += -Wno-unused-parameter
 
 # Add the ./include directory to the header search path

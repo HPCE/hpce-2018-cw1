@@ -18,7 +18,19 @@ better choice if you want a full install with a GUI, while
 Debian is a bit more stable. For our purposes Ubuntu is
 a good choice.
 
-Setting up a virtual machine
+Running in AWS
+--------------
+
+In the next coursework we will be using Amazon AWS, and this
+is the intended assessment environment, so you may wish to
+look ahead to the notes in the next coursework and purely
+use AWS. However, be aware that time in AWS costs money,
+so you should use a cheap instance for development (e.g.
+something that only costs 10p an hour). Generally speaking it is
+better to use a local machine for development, and only move to
+the target environment for testing and performance runs.
+
+Using a virtual machine
 ----------------------------
 
 I would suggest setting up a virtual machine rather than
