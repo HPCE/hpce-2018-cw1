@@ -14,7 +14,7 @@ This is a fairly simple coursework that is designed to:
 
 The coursework is due:
 
-    22:00 Fri Oct 20th
+    22:00 Mon 28 Jan
 
 Submission is via blackboard for this coursework, as it is
 unfair to ask everyone to fully use git so soon. Future
@@ -92,7 +92,7 @@ If you are looking at:
     https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN]
 
 then you are at your own private copy. No-one else should be
-able to see this version, except for me (David).
+able to see this version, except for me.
 
 Notice that there is a green button called "Clone or Download"
 on the top right of the page. If you click it and choose `https`,
