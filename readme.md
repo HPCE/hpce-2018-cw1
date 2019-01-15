@@ -170,7 +170,7 @@ First, make it render as a file containing raw RGB32 frames:
 To convert it to an `.mp4` you can use ffmpeg (or avconv):
 
     # Convert it into an mpeg 4 file called julia.mp4
-    ffmpeg -f rawvideo -framerate 25 -pixel_format rgb32 -video_size 640x480 -i julia.bin -vcodec libx264 julia.mp4
+    ffmpeg -f rawvideo -framerate 25 -pixel_format rgb32 -video_size 640x480 -i julia.bin -vcodec libx264  -pix_fmt yuv420p julia.mp4
 
 If you have a GUI available (e.g. in Linux or OS-X) you can play the video directly using ffplay (or avplay):
 
@@ -201,7 +201,7 @@ You should see some output that breaks the execution time down into:
    across all CPUs.
 
  - *sys* : the amount of OS/kernel time taken on behalf of the program
- 
+
  _**Note**: it turns out that `time` in mingw64 is broken,
  [and returns incorrect values for user and system time](https://github.com/HPCE/hpce-2018-cw1/issues/37).
  There is a workaround detailed in the issue to get correct user time, but note that the
@@ -421,10 +421,10 @@ encountered in the in-lecture demo:
 - Compilation errors : usually due to a missing `#include`, or due to the TBB
   files not being on the include path. You may also see problems due to [the
   argument types for `parallel_for`](https://github.com/HPCE/hpce-2018-cw1/issues/35).
-  
+
 - Linker errors : this is because the TBB library needs to be linked into the
   executable.
-  
+
 If you use a version of TBB installed with your package manager, the only
 change you should need is to uncomment this line in the makefile:
 
@@ -433,7 +433,7 @@ change you should need is to uncomment this line in the makefile:
 by changing it to:
 
     LDLIBS += -ltbb
-    
+
 i.e. removing the '#'. This is the equivalent of when `-ltbb` was explicitly
 added to the command line in the in-lecture demo. _Thanks to @ppp2211 for
 [pointing out this was missing](https://github.com/HPCE/hpce-2018-cw1/issues/32)._

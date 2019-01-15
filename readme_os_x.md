@@ -21,10 +21,10 @@ You have three main choices:
 
 2 - Use the [`macports`](https://www.macports.org/) package manager
     to install and manage the additional tools.
-  
+
 3 - Run [Linux in a virtual machine](platforms_linux.md). For OS X
     I would suggest one of the above options in preference to a VM.
-    
+
 _Note: Student consensus seems to be that brew is easier than ports, see [issue 17](https://github.com/HPCE/hpce-2017-cw1/issues/17)._
 
 Some people like macports, some like homebrew - personally I've only
@@ -40,13 +40,13 @@ Then it will look for packages containing tbb. In this case the
 package is just called `tbb`, so the following will install it:
 
     sudo port install tbb
-    
+
 The `sudo` command allows it to run as administrator, so that it
 can change system-wide settings. You can also install other tools,
 for example you probably want `make` and `git`:
 
     sudo port install make git
-    
+
 The macports package provides a very similar experience to Linux,
 and pretty much everything will work that works in Linux.
 
@@ -58,6 +58,6 @@ Installing FFMPEG with brew
 
 @filangel suggests [how to install ffmpeg using brew](https://github.com/HPCE/hpce-2017-cw1/issues/33):
 
-    brew install ffmpeg --with-fdk-aac --with-sdl2 --with-freetype --with-libass --with-libvorbis --with-libvpx --with-opus --with-x265
+    brew install ffmpeg --with-fdk-aac --with-freetype --with-libass
 
 It was also noted by @nar213: It can take up to 10 minutes.
