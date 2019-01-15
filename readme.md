@@ -22,7 +22,7 @@ courseworks will be via git only.
 
 At various points I mention posting "issues". Issues are a way
 of registering bugs, but I also use them here for communication.
-If you want to register an issue, go to the [issues](https://github.com/HPCE/hpce-2017-cw1/issues)
+If you want to register an issue, go to the [issues](https://github.com/HPCE/hpce-2018-cw1/issues)
 page for the shared master repository. Please note that issues
 should include enough information to allow other people to help.
 
@@ -84,12 +84,12 @@ have your own private repository containing a copy of
 the coursework. If you are currently on the github website
 looking at:
 
-    https://github.com/HPCE/hpce-2017-cw1
+    https://github.com/HPCE/hpce-2018-cw1
 
 then you are on the shared (read-only) copy of the specification.
 If you are looking at:
 
-    https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN]
+    https://github.com/HPCE/hpce-2018-cw1-[YOUR_LOGIN]
 
 then you are at your own private copy. No-one else should be
 able to see this version, except for me.
@@ -98,14 +98,14 @@ Notice that there is a green button called "Clone or Download"
 on the top right of the page. If you click it and choose `https`,
 you should get the following URL:
 
-    https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN].git
+    https://github.com/HPCE/hpce-2018-cw1-[YOUR_LOGIN].git
 
 Open your terminal, and navigate to a convenient directory
 (e.g. your working directory, or some directory containing
 all your courseworks). You can now clone a local copy of your
 repository by doing:
 
-    git clone https://github.com/HPCE/hpce-2017-cw1-[YOUR_LOGIN].git
+    git clone https://github.com/HPCE/hpce-2018-cw1-[YOUR_LOGIN].git
 
 After typing in your github credentials, you should have
 a local copy of the repository. Note that you could also use
@@ -113,7 +113,7 @@ a git GUI for this step - it doesn't really matter how you get it.
 
 To move into the repository, do:
 
-    cd hpce-2017-cw1-[YOUR_LOGIN]
+    cd hpce-2018-cw1-[YOUR_LOGIN]
 
 If you do `ls`, you should see all the files and directories
 from the repository.
@@ -203,13 +203,13 @@ You should see some output that breaks the execution time down into:
  - *sys* : the amount of OS/kernel time taken on behalf of the program
  
  _**Note**: it turns out that `time` in mingw64 is broken,
- [and returns incorrect values for user and system time](https://github.com/HPCE/hpce-2017-cw1/issues/37).
+ [and returns incorrect values for user and system time](https://github.com/HPCE/hpce-2018-cw1/issues/37).
  There is a workaround detailed in the issue to get correct user time, but note that the
  remaining parts only really need execution time (i.e. the "real" part)._
 
 You may find that `real = user + sys`, or `real > user + sys`. Eventually
 we would like to get to `real = user / P + sys`, where P is the number of
-processors (e.g. see [this question](https://github.com/HPCE/hpce-2017-cw1/issues/26)).
+processors (e.g. see [this question](https://github.com/HPCE/hpce-2018-cw1/issues/26)).
 
 Note that in the following I have no particular hardware or
 software platform in mind - it is whatever you prefer to use.
@@ -420,7 +420,7 @@ encountered in the in-lecture demo:
 
 - Compilation errors : usually due to a missing `#include`, or due to the TBB
   files not being on the include path. You may also see problems due to [the
-  argument types for `parallel_for`](https://github.com/HPCE/hpce-2017-cw1/issues/35).
+  argument types for `parallel_for`](https://github.com/HPCE/hpce-2018-cw1/issues/35).
   
 - Linker errors : this is because the TBB library needs to be linked into the
   executable.
@@ -436,7 +436,7 @@ by changing it to:
     
 i.e. removing the '#'. This is the equivalent of when `-ltbb` was explicitly
 added to the command line in the in-lecture demo. _Thanks to @ppp2211 for
-[pointing out this was missing](https://github.com/HPCE/hpce-2017-cw1/issues/32)._
+[pointing out this was missing](https://github.com/HPCE/hpce-2018-cw1/issues/32)._
 
 _**Note**: you may find that the platform you originally chose makes it difficult
 to install TBB. Do not despair - your code should be portable to other platforms,
@@ -558,7 +558,7 @@ In order to submit:
 - run `make clean` to get rid of temporary files.
 
 - zip your submission directory into a file called `[YOUR_LOGIN].zip`.
-  Note, this zip should [contain the sources as well](https://github.com/HPCE/hpce-2017-cw1/issues/28).
+  Note, this zip should [contain the sources as well](https://github.com/HPCE/hpce-2018-cw1/issues/28).
 
 - Submit it via blackboard.
 
