@@ -364,7 +364,7 @@ Modifying the makefile won't tell `make` that the inputs have changed; to
 do that you can pass the `-B` option to make, or touch/modify one of the sources.
 
 **Task**: Re-generate the maximum iteration scaling performance from earlier,
-and plot a graph of the absolute release execution times versus the debug execution times
+and plot a graph of the absolute release execution times *and* the absolute debug execution times
 (seconds on the y scale). Save it as a graph called `results/release_max_iter_versus_time.pdf`.
 
 **Task**: Re-generate the dimension scaling performance from earlier,
